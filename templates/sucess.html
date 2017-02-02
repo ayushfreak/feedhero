@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FEED LIST</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+table, td, th {
+    border: 1px solid black;
+	padding: 15px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+	font-size: 1.5em;
+}
+
+
+</style>
+
+</head>
+
+
+   <body style="background-color: #026873;
+background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+background-size: 13px, 29px, 37px, 53px;">
+<div class="container">
+  <h2 style="font-size: 4.0em;text-align:center; text-decoration: underline;">Feed Information</h2>
+<table >
+		<thead>
+        <tr>
+        <th >Sno</th>
+        <th >Title</th>
+        <th>Link</th>
+        </tr>
+		</thead>
+		 <tbody>
+        {%for d in data%}
+          <tr>
+          <td style="font-size: 1.5.0em;font-weight: bold;">{{ d[0] }}</td>
+          <td style="font-size: 1.5em; font-weight: bold;">{{ d[1] }}</td>
+          <td style="font-size: 1.5em; font-weight: bold;">{{ d[2] }}</td>
+          </tr>
+        {% endfor %}
+		 </tbody>
+        </table>
+</div>
+</body>
+</html>
